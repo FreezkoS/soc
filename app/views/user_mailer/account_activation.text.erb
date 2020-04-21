@@ -1,0 +1,3 @@
+Здаров <%= @user.name %>
+Добро пожаловать в супер-пупер можную соц.сеть ВТуза! Жмяхни по ссылке, чтобы активировать свой аккаунт:
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
