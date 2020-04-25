@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       if @user.save
           @user.send_activation_email
           flash[:info] = "Уважаемый, проверька свою почту, чтобы подтвердить аккаунт."
-          redirect_to root_url
+          render 'static_pages/home.html.erb'
       else
           render 'new'
       end

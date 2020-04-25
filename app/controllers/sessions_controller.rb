@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
           redirect_back_or user
           else
               message = "Активация аккаунта невыполнена!"
-              message += "Проверьте вашу почту для активации аккаунта."
+              message += " Проверьте вашу почту для активации аккаунта."
               flash[:warning] = message
               redirect_to root_url
           end
