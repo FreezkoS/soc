@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :microposts, dependent: :destroy #связь с микропостами и удаление связующих с пользователем элементов
+    
     attr_accessor :remember_token, :activation_token, :reset_token
     
     before_save :downcase_email #перевод в нижний регистр
@@ -68,6 +70,11 @@ class User < ApplicationRecord
     #возвращает true, если время для сброса пароля истекло
     def password_reset_expired?
         reset_sent_at < 2.hours.ago
+    end
+    
+    #определяем прото-ленту
+    def feed
+        Micropost.where("user_id = ?", id)
     end
     
     private

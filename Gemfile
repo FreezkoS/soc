@@ -34,7 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog', '1.36.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

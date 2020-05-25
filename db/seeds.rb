@@ -17,3 +17,9 @@ User.create!(name: "Egor Kot", email: "egor.uxanov.97@mail.ru", password:"12345A
                 activated: true,
                 activated_at: Time.zone.now)
 end
+
+user = User.order(:created_at)
+50.times do
+    content = Faker::Lorem.sentence(5)
+    user.each { |user| user.microposts.create!(content: content) }
+end
