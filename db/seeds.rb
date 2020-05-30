@@ -18,8 +18,18 @@ User.create!(name: "Egor Kot", email: "egor.uxanov.97@mail.ru", password:"12345A
                 activated_at: Time.zone.now)
 end
 
+
+#микросообщения
 user = User.order(:created_at)
 50.times do
     content = Faker::Lorem.sentence(5)
     user.each { |user| user.microposts.create!(content: content) }
 end
+
+#взаимоотношения следования
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

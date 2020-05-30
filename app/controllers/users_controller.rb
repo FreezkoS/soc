@@ -1,5 +1,5 @@
 class UsersController < ApplicationController 
-  before_action :logged_in_user, only: [:edit, :update, :index, :destroy]  #предварительный фильтр для загрузки информции до загрузки контроллера
+  before_action :logged_in_user, only: [:edit, :update, :index, :destroy, :following, :followers]  #предварительный фильтр для загрузки информции до загрузки контроллера
   before_action :correct_user, only: [:edit, :update]  #предварительный фильтр для того, чтобы свою страницу могли редактировать только зарегистрированные пользователи
   before_action :admin_user, only: :destroy
    
@@ -47,6 +47,21 @@ class UsersController < ApplicationController
         else 
             render 'edit'
         end
+    end
+    
+    
+    def following
+        @title = "Подписки"
+        @user = User.find(params[:id])
+        @users = @user.following.paginate(page: params[:page])
+        render 'show_follow'
+    end
+    
+    def followers
+        @title = "Подписчики"
+        @user = User.find(params[:id])
+        @users = @user.followers.paginate(page: params[:page])
+        render 'show_follow'
     end
     
     private
