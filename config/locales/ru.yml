@@ -1,0 +1,37 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+        blank: '- не может быть пустым'
+        invalid: '- неккоректные данные'
+        confirmation: '- не совпадают'
+        too_short: '- слишком короткий'
+    attributes:
+      micropost:
+        content: 'Содержание'
+      user:
+        name: 'Имя'
+        email: 'Почта'
+        password: 'Пароль'
+        confirmation: 'Подтверждение пароля'
+        password_confirmation: 'Подтверждение пароля'
+  datetime:
+    distance_in_words:
+      x_days:
+        one: '1 д'
+        two: '2 д'
+        three: '3 д'
+        four: '4 д'
+        five: '5 д'
+        six: '6 д'
+        few: '%{count} д'
+        other: '%{count} д'
+      x_minutes:
+        one: '1 мин'
+        other: '%{count} мин'
+      less_than_x_minutes: 'меньше %{count} мин'
+      about_x_hours: 'около %{count} ч'
+  will_paginate:
+    page_gap: "&hellip;"
+    previous_label: "Пред"
+    next_label: "След"

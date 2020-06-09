@@ -10,7 +10,28 @@ $gray-medium-light: #eaeaea;
     box-sizing: border-box;
 }
 
+#logo{
+height: 38px;
+width:auto;
+}
 
+body{
+    background-image: url("f1.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-size: 100px 100px;
+    background-clip: border-box;
+}
+
+
+.pr{
+    background-color: white;
+    padding-top:10px;
+}
+
+.pm{
+   margin-top: 30px; 
+}
 /*Разное*/
 
 .debug_dump{
@@ -21,10 +42,12 @@ $gray-medium-light: #eaeaea;
     @include box-sizing;
 }
 
+
+
 /*Общие*/
 
 body{
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 section{
@@ -69,23 +92,28 @@ p{
     line-height: 1.7em;
 }
 
+/* Меню */
+.navbar{
+background-color: black;
+}
+
 /* Заголовок */
 
 #logo{
     float: left;
     margin-right: 10px;
-    font-size: 1.7em;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: -1px;
     padding-top: 9px;
-    font-weight: bold;
-    &:hover{
-      color: white;
-      text-decoration: none;
-    }
 }
 
+@media screen and (max-width: 763px)
+{ 
+    #logo{
+        float: none;
+        display: block;
+        display: block;
+        margin: auto;
+    }
+}
 
 /* Подвал */
 

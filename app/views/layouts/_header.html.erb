@@ -1,7 +1,13 @@
  <header class="nav navbar-fixed-top navbar-inverse">
           <div class="container">
-              <%= link_to "vtuza", root_path, id: "logo" %>
-              <nav>
+             <div class="row">
+              <nav class="bg_nav">
+                  <div class="col-md-6 col-12">
+                      <div class="save">
+                        <%= link_to image_tag("logo.png", :id => 'logo'), root_path %>
+                      </div>
+                      </div>
+                   <div class="col-md-6">
                   <ul class="nav navbar-nav navbar-right">
                       <li><%= link_to "Главная", root_path %>
                       <li><%= link_to "Помощь", help_path %>
@@ -24,6 +30,8 @@
                       <li><%= link_to "Войти", login_path %>
                       <% end %>
                   </ul>
+                  </div>
               </nav>
+                 </div>
           </div>
       </header>

@@ -15,14 +15,14 @@
             <%= f.label :password %>
             <%= f.password_field :password, class: 'form-control' %>
         
-            <%= f.label :'password_confirmation', "Confirmation" %>
+            <%= f.label :'password_confirmation', "Подтверждение пароля" %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
-            <%= f.submit "Save changes", class: 'btn btn-primary' %>
+            <%= f.submit "Сохранить изменения", class: 'btn btn-primary' %>
         <% end %>
         
         <div class="gravatar_edit">
             <%= gravatar_for @user %>
-            <a href="http://gravatar.com/emails" target="_blank">change</a>
+            <a href="http://gravatar.com/emails" target="_blank">Выбрать</a>
         </div>
     </div>
 </div>
