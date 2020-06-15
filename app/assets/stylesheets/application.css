@@ -14,15 +14,3 @@
  *= require_self
  */
 
-@media screen and (max-width: 763px)
-{ 
-    #logo{
-        float: none;
-        display: block;
-        display: block;
-        margin: auto;
-    }
-    .pr{
-        padding-top: 170px;
-    }
-}
